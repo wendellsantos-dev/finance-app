@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - FinanceFlow{% endblock %}
+
+{% block content %}
+    <h2>Entrar na sua conta</h2>
+    <form method="POST" action="/login">
+        <div>
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="seu@email.com">
+        </div>
+        <div>
+            <label>Senha</label>
+            <input type="password" name="senha" placeholder="Sua senha">
+        </div>
+        <button type="submit">Entrar</button>
+    </form>
+{% endblock %}

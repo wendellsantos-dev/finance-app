@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastro - FinanceFlow{% endblock %}
+
+{% block content %}
+    <h2>Criar nova conta</h2>
+    <form method="POST" action="/cadastro">
+        <div>
+            <label>Nome</label>
+            <input type="text" name="nome" placeholder="Seu nome">
+        </div>
+        <div>
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="seu@email.com">
+        </div>
+        <div>
+            <label>Senha</label>
+            <input type="password" name="senha" placeholder="Sua senha">
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+{% endblock %}
