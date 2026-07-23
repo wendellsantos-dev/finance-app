@@ -1,12 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask
 from config import Config
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    @app.route('/')
-    def index():
-        return render_template('index.html')
+    from app.routes.main import main
+    app.register_blueprint(main)
 
     return app
